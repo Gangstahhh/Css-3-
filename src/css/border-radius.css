@@ -1,0 +1,36 @@
+/* NOTE: Hapus coment jika ingin melihat hasilnya */
+/* NOTE: Border radius di gunakan untuk mengatur ujung kotak bisa di buat tumpul atau dibuat lingkaran */
+
+div {
+    width:300px;
+    height:300px;
+    background-color:salmon;
+    /* ====== BORDER RADIUS ======= */
+    /* MEMBUAT SECARA KESELURUHAN */
+    /* border-radius:40px; */
+    /* MEMBUAT BORDER RADIUS DI SETIAP SISI */
+    /* border-top-right-radius:20px;
+    border-bottom-left-radius:50px; */
+    /* ========== SHORTHAND ============  */
+    /* searah jarum jam */
+    border-radius:0 120px;
+    text-align:center; /*Membuat tulisan menjadi rata tengah secara horizontal*/
+    line-height:300px; /*jika ingin tengah secara vertikal bisa menggunakan property line-height dengan value sesuai dengan ukuran kotak    */
+}
+
+.satu {
+    /* NOTE: JIKA KALIAN MENAMBAHKAN BACKGROUND IMAGE DI DALAM DIV YANG SUDAH ADA BORDER RADIUSNYA BACKGROUND IMAGE YANG AKAN KALIAN KASIH AKAN LANGSUNG MENGIKUTI BENTUK DARI DIV YANG KALIAN BUAT */
+    background-image:url(/public/img/dante.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+/* INFO: Cara mengatasi elemen iamge yang keluar dari frame div dengan menggunakan overflow dan di atur ukuran gambarnya sesuai pembungkusnya */
+.dua {
+    overflow:hidden;
+}
+
+.dua img {
+    width:300px;
+    height:300px;
+}
