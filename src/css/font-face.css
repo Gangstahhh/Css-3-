@@ -1,0 +1,62 @@
+/* NOTE: FONT FACE INI BIASA DI GUNAKAN UNTUK MENGUBAH BENTUK FONT YANG KITA MILIKI. WALAUPUN  ADA PROPERTY FONT-FAMILY. TETAP SAJA KURANG JIKA KALIAN INGIN MENGGUNAKAN FONT YANG LAIN */
+/* PADA CSS SEBELUM CSS3 ADA PENGGUNAAN FONT INI MASIH SANGAT KURANG JADI KITA MASIH KURANG BISA MENGCUSTOM FONT KITA */
+
+/* ADA BEBERAPA CARA MEMBUAT FONT KITA TERLIHAT MENARIK
+    - menggunakan  property font-family dan menggubahnya sesuai dengan font yang ada di komputer / local kita */
+
+/* VIA PROPERTY FONT FAMILY */
+h2 {
+    font-size:50px;
+    text-align:center;
+    font-family:arial,sans-serief;
+}
+/* IMPORT di dalam css langsung  / MENGGUNAKAN TAG LINK YANG DI TARUH DI FILE HTML DAN MEMANGGILNYA MENGGUNAKAN PROPERTY FONT-FAMILY VIA GOOGLE FONTS*/
+/* @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Ubuntu&display=swap'); */
+/* NOTE: KEKURANGAN: HARUS MEMILIKI INTERNET SOALNYA NGAMBIL ONLINE SISTEM IMPORTNYA */
+h1 {
+    font-size:100px;
+    text-align:center;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* FONT FACE */
+/* NOTE: Kelebihan FULL OFFLINE FONT KARENA FONT YANG KITA PAKAI ADALAH FONT YANG TELAH KITA DOWNLOAD LEWAT SITUS DOWNLOAD FONT */
+/* Layanan Font
+- fonts.google.com
+- fontsquirell.com (recomended)
+- fontspring.com
+- webtype.com
+- typotheque.com
+- dll */
+/* EXAMPEL */
+/* @font-face {
+    font-family:'namafontbaru';
+    src: url('lokasi/file/fontbaru.eot');
+    src: url('lokasi/file/fontbaru.eot?#iefix') format('emedded-opentype'), MULTIPEL FONT FACE Menggunakan Koma Jika font yang ingin di pakai ada banyak
+    url('lokasi/file/fontbaru.woff2') format('woff2'),
+    url('lokasi/file/fontbaru.woff') format('woff'),
+    url('lokasi/file/fontbaru.ttf') format('truetype'),
+    url('lokasi/file/fontbaru.svg#svgfontname') format('svg');
+} */
+
+
+/* @font-face {
+    font-family:"kaushanscript"; pemilihan nama di sini sesuka kalian yah. tapi biasanya sudah di sediakan nama fontnya oleh pembuatnya
+    src: url(/public/font/KaushanScript-Regular.otf) format('opentype');
+} */
+h3 {
+    font-size:25px;
+    text-align:center;
+    font-family:"kaushanscript";
+}
+
+/* IMPORTANT: Extensi file font yang baik adalah woff karena lebih ringan dan di khususkan untuk webiste jadi untuk loading bisa lebih cepat dari pada ttf dan otf */
+/* Kalian bisa merubah extensi dari file font kalian dengan menggunakan web font generator. masih di webiste yang sama yaitu fontsquirell.com*/
+@font-face {
+    font-family: 'kaushanscript';
+    src: url(/public/font/kaushanscript-regular-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

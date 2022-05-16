@@ -1,0 +1,64 @@
+/* NOTE: Gradient sering di gunakan untuk membuat dua warna atau lebih di dalam sebuah elemen, dan gradient ini terbagi menjadi dua, yaitu: */
+
+/* LINEAR-GRADIENTS */
+/* Linear-gradient di gunakan untuk memberikan warna gradasi pada element yang kita punya secara garis lurus */
+/* RADIAL-GRADIENTS */
+/* Radial-gradient ini di gunakan untuk membuat gradasi pad aleemnt yang kita punya secara melingkar */
+
+/* IMPORTANT: Linear-Gradient dan Radial-gradient itu bukan property css3, melainkan value background-image */
+
+/* Penulisan Sintaks sederhananya
+- background-image:linear-gradient(warna awal,warna akhir);
+- background-image:radial-gradient(warna awal,warna akhir); */
+
+/* PENULISAN SINTAK LENGKAP 
+- background:linear-gradient(sudut|arah,warna awal, warna akhir);*/
+    /* NOTE: - sudut (untuk sudut bisa menggunakan satuan deg (degre/derajat) 
+    
+    - dan untuk arah bisa menggunakan:
+    -to bottom (dari atas ke bawah)
+    -to top (dari bawah ke atas)
+    -to left (dari kanan ke kiri)
+    -to right(dari kiri ke kanan)*/
+    /* DIAGONAL VERSION
+    - to left top (untuk kanan atas)
+    -to left bottom (untuk kiri bawah)
+    -to right top (untuk kanan atas)
+    -to right bottom( untuk kanan bawah)
+    -dsb */
+
+/* - background:radial-gradient(<tipe> <jangkauan> at <posisi-y> <posisi-x> <warna awal> <warna akhir> .... <warna -n> ) */
+/* NOTE: - tipe terbagi menjadi dua yaitu(elipse(default) dan circle)
+         - jangkauan  adalah jarak dari pusat gradient ke sisi terluar-nya dan jangkauan ini terbagi menjadi,4 yaitu: 
+            - closest-corner (jarak dari pusat gradient ke sudut terdekat elemen)
+            - closests-side (jarak dari pusat gradient ke sisi terdekat elemen)
+            - farthest-corner (jarak dari pusat gradient ke sudut elemen)
+            -farthest-side  (jarak dari pusat gradient ke sisi terjauh elemen)
+         - posisi-x (adalah posisi titik pusat secara horizontal) dan posisi-x ini memiliki value:
+            - top
+            - center
+            - bottom
+            - px
+         - posisi-y (adalah posisi titik pusat secara vertikal) dan posisi-y ini memiliki value:
+            - left 
+            - center 
+            - right
+            - px*/
+        
+
+
+/* INFO: Penggunaan gradient ini bisa menggunakan property background saja tidak usah di tambah image. dan value untuk warnanya bisa di isi dengan nilai hexa */
+/* INFO: Multipel color bisa di terapkan untuk warna lebih dari 2 */
+
+div {
+    width:600px;
+    height:300px;
+    margin:50px auto;
+    /* background-image:linear-gradient(green,rgba(255,255,0,1),red); */
+    background:radial-gradient(circle farthest-corner, red,yellow);
+    /* background:linear-gradient(#00ff00,#ff0000); */
+    /* background:linear-gradient(to bottom right,red,yellow); */
+    /* COLOR STOP di gunakan untuk mengatur bobot dari warna*/
+}
+
+

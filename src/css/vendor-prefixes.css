@@ -1,0 +1,21 @@
+/* NOTE: VENDOR PREFIXES ADALAH TEKNIK CSS3 UNTUK CODE CSS3 KITA BERJALAN DI SEMUA BROWSER */
+/* DI SINI HANYA DI SELIPKAN SAJA YA ADICK ADICK */
+
+/* PENULISAN VENDOR PREFIXES YANG BENAR*/
+/* -webkit-<property css3> (chrome,safari,opera versi terbau)
+   -moz-<property css3> (firefox)
+   -ms-<property css3> (internet eksplorer)
+   -o-<property css3> (opera versi terdahulu) */
+
+
+   /* EXAMPLE */
+   body {
+       text-align:center;
+   }
+
+   img {
+       -webkit-filter:grayscale(100%);
+       /* filter:grayscale(100%); */
+   }
+
+/* NOTE: KALIAN BISA MELIHAT PROPERTY YANG BUTUH FIXES ATAU TIDAK DI WEBSITE caniuse.com atau menggunakan plugin emmet*/
