@@ -1,0 +1,22 @@
+/* NOTE: Text shadow ini sama hal nya seperti box shadow bedanya ada pada penggunaanya box shadwo untuk sebuah element sedangkan text shadow untuk text saja */
+/* NOTE: untuk value atau dari text shadow ini sangat mirip dengan box shadow bedanya hanya pada spread dan inset pada property text shadow tidak di ada. */
+/* - x-offset
+   - y-offset
+   - blur
+   -color */
+
+h1 {
+    font-size:100px;
+    text-align:center;
+    font-family:arial;
+    text-shadow:5px 5px 5px green, /*MULTIPEL SHADOW*/ -5px -5px 5px red;
+}
+
+/* CONTOH MEMBUAT 3D TEXT */
+/* h1 {
+    font-size:100px;
+    text-align:center;
+    font-family:arial;
+    color:white;
+    text-shadow:0 2px 1px black;
+} */
