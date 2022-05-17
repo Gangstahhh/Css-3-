@@ -1,0 +1,76 @@
+/* NOTE: TRANSISITION ADALAH PROPERTI CSS3 YANG BERGUNA UNTUK MENGUBAH NILAI DARI PROPERTI SECARA HALUS */
+
+/* PERBEDAAN TRANSITION DAN ANIMATION */
+/* WALAUPUN KEDUA PROPERTI INI SAMA FUNGSINYA
+AKAN TETAPI MEREKA MEMILIKI PERBEDAAN YAITU PADA KEADAAN AWAL DAN KEADAAN AKHIR */
+
+/* PADA TRANSITION HANYA MEMPUNYAI DUA KEADAAN YAITU 
+- KEADAAAN AWAL
+- KEADAAAN AKHIR */
+/* SEDANGKAN PADA ANIMATION MEMPUNYAI KEADAAN SEBANYAK YANG KITA MAU.
+KEADAAN PADA ANIMATION DI SEBUT DENGAN KEYFRAME */
+
+/* PENULISAN */
+/* transition:[property] <durasi> NOTE: DURASI INI WAJIB (s/ms) [fungsi] [delay]; */
+/* - durasi (digunakan untuk menentukan durasi) 
+   - property (menentukan property apa saja yang akan melakukan transitionbisa dikit atau banyak elemen)
+   (all,<nama properti>, none
+   - fungsi (adalah pergerakan apa yang akan kalian lakukan jika memakai transisi)
+    - ease (default)
+    - ease-in (perbedaan pada kecepatan awal dan akhir)
+    - ease-out
+    - ease-in-out
+    - linear
+    - cubic-bezier(w,x,y,z) 
+   - delay (adalah waktu tunggu sebelum kita menajalankan transisi yang kita jalankan)*/
+
+
+
+.body {
+    margin:0;
+    padding:0;
+}
+
+.kotak {
+    width:100px;
+    height:100px;
+    background-color:salmon;  
+    /* INFO: SELALU TARUH PROPERTY TRANSITION INI DI POSISI AWAL */
+    /* transition:1s ease-in; */
+    text-align:center;
+    line-height:100px;
+    margin:5px ;
+}
+
+.kotak1 {
+    transition: margin-left 3s, transform 3s 2s, background-color 500ms 2s;
+}
+.kotak2 {
+    transition:all 3s ease-in;
+}
+.kotak3 {
+    transition:all 3s ease-out;
+}
+.kotak4 {
+    transition:all 3s ease-in-out;
+}
+.kotak5 {
+    transition:all 3s linear;
+}
+.kotak6 {
+    /* KALIAN BISA DENGAN MUDAH MENGATURNYA DI INSPECT ELEMEN KALIAN DI BROWSER KALIAN , DIBAGIAN STYLE DENGAN CLASS KOTAK6 DI BAGIAN PROPERTY CUBIC-BEZIER DI SAMPING PROPERTI ITU ADA ICON BERWARNA TINGGAL KALIAN KLIK. DAN DI BAGIAN SITULAH KALIAN BISA MENGEDIT NYA SESUAI KEINGINAN KALIAN. SETELAH SELESAI KALIAN BISA MENYALIN KODE CSSNYA  */
+    transition:all 3s cubic-bezier(0.72, 0.1, 0.65, 1.35);
+}
+
+
+.container {
+    width:800px;
+    margin:10px auto;
+    border:5px solid black;
+}
+
+.container:hover .kotak{
+    transform:rotate(720deg);
+    margin-left:700px;
+    background-color:royalblue;
+}

@@ -1,0 +1,69 @@
+/* NOTE: Filter adalah property css3 yang digunakan untuk memberikan efek visual pada gambar,background,atau border */
+
+/* Untuk Value dari property filter ini yaitu: */
+/*  */
+/* - blur        - gray scale    - invert
+   - brightness  - sepia         - opacity
+   - contrast    - hue-rotate    - drop-shadow
+   - saturate*/
+/* PENULISAN 
+filter:<tipe-filter>;*/
+
+div {
+    display:flex; /*belum di pelajari*/
+    justify-content:center; /*belum di pelajari*/
+}
+
+img {
+    width:600px;
+    height:600px;
+}
+
+.satu  img{
+    filter:blur(5px);
+}
+.dua  img{
+    filter:brightness(120%);
+}
+.tiga  img{
+    filter:contrast(200%);
+}
+.empat  img{
+    filter:saturate(200%);
+}
+.lima  img{
+    filter:grayscale(100%);
+}
+.enam  img{
+    filter:sepia(100%);
+}
+.tujuh  img{
+    filter:hue-rotate(100deg);
+}
+.delapan  img{
+    filter:invert(100%);
+}
+/* INFO: PENGGUNAAN FILTER:OPACITY; SANGAT LAH BAGUS DI BANDING MENGGUNAKAN PROPERTY OPACITY DI KARENAKAN PROPERTY OPACITY INI LEBIH MENGGUNAKAN KEMAMPUAN HARDWARE SEDANGKAN UNTUK PROPERTY FILTER DENGAN VALUE OPACITY INI LEBIH MENGARAH KE KEMAMPUAN BROWSER */
+.sembilan  img{
+    filter:opacity(.5);
+}
+/* INFO: DENGAN MENGGUNAKAN PROPERTY FILTER DENGAN VALUE DROP-SHADOW INI KALIAN BISA DENGAN MUDAH MEMBERIKAN BAYANGAN KE ELEMEN DAN JUGA TEXT TANPA HARUS MENGGUNAKAN PROPERTY BOX-SHADOW ATAUPUN TEXT SHADOW*/
+
+/* INFO: JIKA KALIAN MEMILIKI GAMBAR DENGAN SEBUAH KALIMAT YANG BEREKSTENSI PNG TANPA BACKGROUND. DROP-SHADOW BISA MENGISI KEKOSONGAN BACKGROUND ITU DENGAN MUDAH */
+.sepuluh img{
+    filter:drop-shadow(5px 5px 5px black);
+}
+
+/* MULTIPEL FILTER */
+.multi {
+    filter:blur(5px) grayscale(100%);
+}
+
+/* PESUDO CLASS X FILTER */
+.multi2 {
+    filter:saturate(20%) blur(5px);
+}
+
+.multi2:hover {
+    filter:saturate(100%)
+}

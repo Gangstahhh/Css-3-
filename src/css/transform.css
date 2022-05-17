@@ -1,0 +1,60 @@
+/* NOTE: PROPERTY TRANSFORM MEMUNGKINKAN KITA DAPAT MEMANIPULASI FORMAT VISUAL DARI ELEMEN HTML */
+/* TRANSFORMASI TERBAGI MENADJI DUA JENIS, YAITl:
+2D & 3D*/
+
+/* 2D TRANSFORMASI TERBAGI MENJADI BEBERAPA FUNGSI YAKNI*/
+/*  - SCALE (memperbesar/memperkecil)
+    - ROTATE (memutar)
+    - SKEW (membuat condong/miring)
+    - TRANSLATEE (mengubah posisi) */
+
+/* PENULISAN */
+/* - scale(angka), scalex(angka), scaley() */
+
+
+/* EXAMPLE 2D TRANSFORMATION */
+.kotak {
+    width:200px;
+    height:200px;
+    background-color:lightblue;
+    margin:50px auto 0;
+    /* transform:scale(0.5); */
+    transition:1s;
+}
+
+/* SCALE EXAMPLE */
+/* .kotak:hover {
+    transform:scale(1.5);
+    transform:scaleX(2); 
+    transform:scaleY(1.2);
+} */
+
+/* ROTATE EXAMPLE */
+/* .kotak:hover {
+    transform:rotate(-45deg);
+    transform:rotatex(100deg);
+    transform:rotatey(180deg);
+} */
+
+/* SKEW EXAMPLE */
+/* .kotak:hover {
+    transform:skew(30deg);
+    transform:skewx(-30deg); 
+    transform:skewy(30deg);
+} */
+
+/* INFO: DALAM PENGGUNAAN TRANSALTE INI SAMA DENGAN MENGGUNAKAN MARGIN ATAU POSITION BEDANYA SEPERTI OPACITY DI FILTER. PADA TRANSFORM DENGAN VALUE TRANSALTE LEBIH MENGARAH KE PERFORMA BROWSER DARI PADA PERFORMA HARDWARE JADI JAUH LEBIH EFFISIEN */
+
+/* INFO: ELEMENT YANG DI BERIKAN PROPERTY TRANSFORM DENGAN VALUE TRANSLATE TIDAK AKAN MEMPENGARUHI ELEMEN YANG LAIN  */
+
+/* TRANSLATE EXAMPLE */
+/* .kotak:hover {
+    transform:translate(50px, 100px);
+    transform:translatex(50px);
+    transform:translatey(100px);
+} */
+
+/* MULTIPEL TRANSFORM */
+.kotak:hover {
+    transform:scale(3) rotate(360deg);
+}
