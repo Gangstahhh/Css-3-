@@ -1,0 +1,73 @@
+/* NOTE: Animation Ini sama halnya dengan transition bedanya ter */
+
+/* KELEBIHAN: BISA LEBIH DARI DUA KONDISI */
+/* VALUE YANG BISA DI KASIH DI PROPERTY ANIMATION 
+- name (nama animasinya)NOTE: PENAMAAN SESUKA KALIAN 
+- duration (durasi dari animasinya)
+- timming-function 
+- delay (transisi)
+- iteration-count (pengulangan) NOTE: <angka> | infinite
+- direction (terbagi menjadi beberapa value,yaitu:
+    - normal (di mulai dari awal frame samapi akhir frame)
+    - reverse (dari akhir sampai awal frame)
+    - alternate (dari awal sampai akhir dan dari akhir sampai awal frame)
+    - alternate-reverse (dari akhir frame sampai awa frame dan dari awal frame sampai akhir frame)
+    )
+- fill-mode (untuk menentukan akhir dari transisinya
+    - none 
+    - forward
+    - backwards 
+    - both)
+- play-state (di gunakan untuk menjalankan dan memberhentikan) 
+    - running (untuk menjalankan animasi) INFO: DEFAULT
+    - paused (untuk memberhentikan animasi) INFO: BIASANYA DI GUNAKAN DENGAN JAVASCRIPT*/
+
+    /* IMPORTANT: SEBELUM MEMBUAT ANIMATIONNYA KALIAN BUAT DULU KEYFRAME-NYA  */
+
+/* PENULISAN 
+ @keyframe [name] {
+     from {
+         [property-css]
+    }
+    to {
+        [property-css]
+    }
+}*/
+
+.kotak {
+    width:200px;
+    height:200px;
+    background-color:salmon;
+    /* SHORTHAND */
+    animation:animasikotak 3s ease infinite alternate-reverse forwards running;
+    /* NULIS SATU SATU */
+    /* animation-name:animasikotak;
+    animation-duration:2s;
+    animation-timing-function:ease;
+    animation-iteration-count:infinite; 
+    animation-play-state:running*/
+}
+
+
+/* @keyframes animasikotak {
+    from {
+        width:200px;
+    }
+    to {
+        width:500px;
+    }
+} */
+
+/* CARA LAIN */
+@keyframes animasikotak {
+    0% {
+        width:200px;
+    }
+    50% {
+        width:500px;
+        height:200px;
+    }
+    100% {
+        width:500px;
+        height:500px;
+}
